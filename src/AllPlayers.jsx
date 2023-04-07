@@ -21,7 +21,7 @@ function AllPlayers (){
     FetchPlayers();
     },[]);
   
-  function addPlayer(){
+  async function addPlayer(){
     try{
         const response = await fetch(`https://fsa-puppy-bowl.herokuapp.com/api/${cohort}/players`,        {
             method: 'POST',
@@ -42,14 +42,14 @@ function AllPlayers (){
     }
 
     
-  }
+  
   
     
     return (
       <div className="App">
         <form onSubmit={()=>{}} >
           <label>name</label>
-          <input type="text" name="name" onChange=/>
+          <input type="text" name="name"/>
           <label>breed</label>
           <input type="text" name="breed"/>
           <button type="submit">submit</button>
@@ -68,6 +68,5 @@ function AllPlayers (){
          </div>
           })}
       </div>
-    )
-}
+    )}
 export default AllPlayers
