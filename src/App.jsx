@@ -3,7 +3,10 @@ import './App.css'
 import AllPlayers from './AllPlayers'
 
 function App() {
-  return(<AllPlayers/>)
+  return(
+    <div className="App">
+    <AllPlayers/>
+    </div>)
 }
 
 export default App
