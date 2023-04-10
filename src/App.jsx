@@ -1,6 +1,7 @@
 
 import './App.css'
-import AllPlayers from './AllPlayers'
+import AllPlayers from './components/AllPlayers'
+
 
 function App() {
   return(
