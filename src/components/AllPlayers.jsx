@@ -5,6 +5,8 @@ const cohort = "2301-ftb-et-web-am"
 function AllPlayers (){
     const [puppyData, setPuppyData] = useState([]); 
     const [puppyId, setPuppyId] = useState(1);
+    const [nameInput, setNameInput] = useState('');
+    const [breedInput, setBreedInput] = useState('')
     const [error, setError] = useState(null);
   
     useEffect(()=>{
