@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import AddPlayer from './AddPlayer';
 
-const cohort = "2301-ftb-et-web-am"
+const COHORT = "2301-ftb-et-web-am"
 function AllPlayers (){
     const [puppyData, setPuppyData] = useState([]); 
     const [puppyId, setPuppyId] = useState(1);
@@ -12,7 +12,7 @@ function AllPlayers (){
     useEffect(()=>{
     async function FetchPlayers(){
       try{
-        const response = await fetch(`https://fsa-puppy-bowl.herokuapp.com/api/${cohort}/players`)
+        const response = await fetch(`https://fsa-puppy-bowl.herokuapp.com/api/${COHORT}/players`)
         // const result = await response.json();
         const { data } = await response.json() //data: {players: []}
         const { players } = data; 
@@ -29,7 +29,8 @@ function AllPlayers (){
     
     return (
       <div className="App">
-        <form onSubmit={()=>{AddPlayer()}} >
+        <form onSubmit={(event)=>{event.preventDefault();
+          AddPlayer(event)}} >
           <label>name</label>
           <input type="text" name="name"/>
           <label>breed</label>

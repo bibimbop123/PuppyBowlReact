@@ -1,8 +1,9 @@
 import React from "react";
 
+const COHORT = "2301-ftb-et-web-am"
 async function AddPlayer(player){
     try{
-        const response = await fetch(`https://fsa-puppy-bowl.herokuapp.com/api/${cohort}/players`,       
+        const response = await fetch(`https://fsa-puppy-bowl.herokuapp.com/api/${COHORT}/players`,       
          {
             method: 'POST',
             headers: {
