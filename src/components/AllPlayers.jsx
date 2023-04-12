@@ -24,13 +24,16 @@ function AllPlayers (){
     }
     FetchPlayers();
     },[]);
-  
-    
+
     
     return (
       <div className="App">
         <form onSubmit={(event)=>{event.preventDefault();
-          AddPlayer(event)}} >
+            let player = {name: document.querySelector("#main-section > div > form > input[type=text]:nth-child(2)").value,
+                          breed: document.querySelector("#main-section > div > form > input[type=text]:nth-child(4)").value}
+            console.log(player)
+          AddPlayer(player)
+          }} >
           <label>name</label>
           <input type="text" name="name"/>
           <label>breed</label>
