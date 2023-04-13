@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { fetchPlayers } from "../api";
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { removePlayer } from "../api";
 
 export default function AllPlayers() {
   const [dogs, setDogs] = useState([]);
@@ -25,6 +26,7 @@ export default function AllPlayers() {
       {dogs.map((dog) => {
         return (
           <p
+            className="dogPlayer"
             key={dog.id}
             onClick={() => {
               navigate(`/${dog.id}`);
@@ -37,8 +39,22 @@ export default function AllPlayers() {
               width="100px"
               height="100px"
             />
-            <button> See Details</button>
-            <button> Remove Player</button>
+            <button
+              onClick={() => {
+                navigate(`/${dog.id}`);
+              }}
+            >
+              {" "}
+              See Details
+            </button>
+            <button
+              onClick={() => {
+                removePlayer(`/${dog.id}`);
+              }}
+            >
+              {" "}
+              Remove Player
+            </button>
           </p>
         );
       })}

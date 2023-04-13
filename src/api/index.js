@@ -41,3 +41,20 @@ export async function fetchSingleDog(id) {
     console.error(error);
   }
 }
+
+export async function removePlayer(playerId) {
+  try {
+    const response = await fetch(`https://fsa-puppy-bowl.herokuapp.com/api/${COHORT}/players/${id}`, {
+      method: "DELETE",
+    });
+    const deletedPuppy = await response.json();
+    if (deletedPuppy.error) throw deletedPuppy.error;
+    console.log(4);
+    return;
+  } catch (error) {
+    console.error(
+      `Oops, an error deleting a player #${playerId} from the roster! `,
+      error
+    );
+  }
+};

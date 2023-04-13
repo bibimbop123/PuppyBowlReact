@@ -1,0 +1,7 @@
+.dogPlayer {
+    display: inline-block;
+    flex-direction: column;
+}
+#navbar {
+    margin:5px;
+}

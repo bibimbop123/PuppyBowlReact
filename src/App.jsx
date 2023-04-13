@@ -9,6 +9,7 @@ function App() {
     <div className="App">
       <nav id="navbar">
         <Link to="/">Home Page</Link>
+        <Link to="/form">New Player Form</Link>
       </nav>
       <div id="main-section">
         <Routes>
