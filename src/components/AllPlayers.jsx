@@ -25,14 +25,18 @@ export default function AllPlayers() {
     <div>
       {dogs.map((dog) => {
         return (
-          <p className="dogPlayer" key={dog.id}>
-            {dog.name}
-            <img
-              src={dog.imageUrl}
-              alt="picture of dog"
-              width="100px"
-              height="100px"
-            />
+          <div className="dogPlayer" key={dog.id}>
+            <p>{dog.name}</p>
+            <div className="dogPicture">
+              {" "}
+              <img
+                src={dog.imageUrl}
+                alt="picture of dog"
+                width="300px"
+                height="300px"
+              />
+            </div>
+
             <button
               onClick={() => {
                 navigate(`/${dog.id}`);
@@ -54,7 +58,7 @@ export default function AllPlayers() {
               {" "}
               Remove Player
             </button>
-          </p>
+          </div>
         );
       })}
     </div>

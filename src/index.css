@@ -1,8 +1,14 @@
 .dogPlayer {
-    display: inline-block;
-    flex-direction: column;
-    margin:10px;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    border: 2px solid black;
+   
+   
 }
 #navbar {
     margin:10px;
+}
+.dogPicture {
+    justify-content: center;
 }
