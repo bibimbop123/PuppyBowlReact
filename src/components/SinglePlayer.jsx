@@ -23,6 +23,12 @@ export default function SingleDog() {
         <ul>
           <li>Name: {dog.data.player.name}</li>
           <li>Breed: {dog.data.player.breed}</li>
+          <img
+            src={dog.data.player.imageUrl}
+            alt="picture of dog"
+            width="100px"
+            height="100px"
+          />
         </ul>
       )}
     </div>

@@ -31,7 +31,12 @@ export default function AllPlayers() {
             }}
           >
             {dog.name}
-
+            <img
+              src={dog.imageUrl}
+              alt="picture of dog"
+              width="100px"
+              height="100px"
+            />
             <button> See Details</button>
             <button> Remove Player</button>
           </p>
