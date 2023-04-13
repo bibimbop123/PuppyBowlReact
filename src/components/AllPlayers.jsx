@@ -31,6 +31,9 @@ export default function AllPlayers() {
             }}
           >
             {dog.name}
+
+            <button> See Details</button>
+            <button> Remove Player</button>
           </p>
         );
       })}
