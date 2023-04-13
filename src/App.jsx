@@ -3,6 +3,7 @@ import "./App.css";
 import AllPlayers from "./components/AllPlayers";
 import NewDogPlayer from "./components/NewDogPlayer";
 import SingleDog from "./components/SinglePlayer";
+
 function App() {
   return (
     <div className="App">
@@ -12,8 +13,8 @@ function App() {
       <div id="main-section">
         <Routes>
           <Route path="/" element={<AllPlayers />} />
-          <Route path="/form" element={<NewDogPlayer />} />
           <Route path="/:dogId" element={<SingleDog />} />
+          <Route path="/form" element={<NewDogPlayer />} />
         </Routes>
       </div>
     </div>

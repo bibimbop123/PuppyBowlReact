@@ -33,7 +33,7 @@ export async function addPlayer(name, breed){
 
 export async function fetchSingleDog(id) {
   try {
-    const response = await fetch(`https://fsa-puppy-bowl.herokuapp.com/api/${COHORT}/players${id}`);
+    const response = await fetch(`https://fsa-puppy-bowl.herokuapp.com/api/${COHORT}/players/${id}`);
     const singleDog = await response.json();
     console.log("singleDog = ", singleDog);
     return singleDog;
