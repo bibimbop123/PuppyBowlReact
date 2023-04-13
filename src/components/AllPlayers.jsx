@@ -25,13 +25,7 @@ export default function AllPlayers() {
     <div>
       {dogs.map((dog) => {
         return (
-          <p
-            className="dogPlayer"
-            key={dog.id}
-            onClick={() => {
-              navigate(`/${dog.id}`);
-            }}
-          >
+          <p className="dogPlayer" key={dog.id}>
             {dog.name}
             <img
               src={dog.imageUrl}
@@ -44,12 +38,17 @@ export default function AllPlayers() {
                 navigate(`/${dog.id}`);
               }}
             >
-              {" "}
               See Details
             </button>
             <button
-              onClick={() => {
-                removePlayer(`/${dog.id}`);
+              onClick={async () => {
+                await removePlayer(`/${dog.id}`);
+                const response = await fetchPlayers();
+                if (response.success) {
+                  setDogs(response.data.players);
+                } else {
+                  setError(response.error);
+                }
               }}
             >
               {" "}

@@ -42,7 +42,7 @@ export async function fetchSingleDog(id) {
   }
 }
 
-export async function removePlayer(playerId) {
+export async function removePlayer(id) {
   try {
     const response = await fetch(`https://fsa-puppy-bowl.herokuapp.com/api/${COHORT}/players/${id}`, {
       method: "DELETE",
