@@ -13,6 +13,7 @@ export default function NewDogPlayer() {
           e.preventDefault();
           const newDog = await addPlayer(name, breed);
           console.log("New Dog from API: ", newDog);
+          alert(`added ${name}!`);
         }}
       >
         <label htmlFor="name">Name:</label>
