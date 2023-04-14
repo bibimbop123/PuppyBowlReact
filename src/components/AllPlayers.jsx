@@ -23,6 +23,7 @@ export default function AllPlayers() {
 
   return (
     <div>
+      <h1>PuppyBowl with React</h1>
       {dogs.map((dog) => {
         return (
           <div className="dogPlayer" key={dog.id}>
@@ -32,8 +33,8 @@ export default function AllPlayers() {
               <img
                 src={dog.imageUrl}
                 alt="picture of dog"
-                width="300px"
-                height="300px"
+                width="100px"
+                height="100px"
               />
             </div>
 
